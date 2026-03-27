@@ -1,26 +1,20 @@
-# Megaminx em R (Work in Progress / Abandonado)
+# Megaminx em R (Projeto Inacabado / Laboratório)
 
-Um simulador matemático de [Megaminx](https://pt.wikipedia.org/wiki/Megaminx) feito inteiramente em R. 
+Um simulador matemático de [Megaminx](https://pt.wikipedia.org/wiki/Megaminx) feito inteiramente em R.
 
-Este é um projeto antigo, desenvolvido "na raça" e à mão, muito antes do uso de IAs para auxiliar na programação. O foco principal foi criar a lógica matemática de rotação de um dodecaedro e o deslocamento das matrizes de cores.
+⚠️ **Aviso de Estado do Projeto:** Esse projeto é antigo, feito "na raça" antes da era das IAs. O código está desorganizado, sem otimização e tem muita gambiarra. Não é um produto final, mas sim um experimento puramente matemático com manipulação de matrizes e geometria.
 
-⚠️ **Aviso de Estado do Projeto:** O código é legado. Está desorganizado, não está otimizado e o projeto em si está longe de ser um produto finalizado ou polido. Espere encontrar gambiarras, código repetitivo e variáveis hardcoded.
+## 🛠️ Como funciona (a teoria por trás da bagunça)
 
-## 🛠️ Como funciona (ou deveria funcionar)
+Tudo é desenhado via trigonometria pura, calculando senos e cossenos, sem imagens prontas.
+* **`dados.R`**: Configura o estado inicial e a matemática vetorial para desenhar o dodecaedro na tela.
+* **`funcoes.R`**: A lógica de rotação (ex: `front_move`) que embaralha as cores e aplica os algoritmos mexendo nos índices dos data frames.
 
-O sistema não usa imagens prontas. Toda a geometria do Megaminx (cantos e arestas) é desenhada via trigonometria pura, calculando senos e cossenos para projetar os polígonos na tela. A mudança de estado é feita movendo os índices dentro de *data frames*.
-
-* **`dados.R`**: Configura o estado inicial do puzzle, a solução e contém a matemática vetorial que desenha as peças do dodecaedro.
-* **`funcoes.R`**: Contém a lógica de movimentação (ex: `front_move`, `side_move`) que embaralha as cores e aplica sequências de algoritmos.
-
-## 🚀 Como testar a bagunça
-
-Se quiser tentar rodar localmente:
-
+## 🚀 Como testar
 1. Tenha o R e o RStudio instalados.
-2. Clone o repositório.
-3. Abra o projeto e rode o script `dados.R` para carregar as matrizes e formas geométricas na memória.
-4. Rode o script `funcoes.R` para aplicar os movimentos e ver a plotagem no painel do RStudio.
+2. Clone o repositório e abra o projeto.
+3. Rode o script `dados.R` para carregar as matrizes na memória.
+4. Rode o script `funcoes.R` para aplicar os movimentos e ver a plotagem.
 
 ## 👨‍💻 Autor
 **Heitor C. Quartezani**
